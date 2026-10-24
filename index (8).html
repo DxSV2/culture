@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CulturePunks – 2,222 hand drawn punks on Robinhood Chain</title>
+<meta name="description" content="Welcome to CulturePunks. 2,222 rare and original hand drawn punks in my culture style with inspirations from NFT and pop culture. Building a brand.">
+<meta property="og:title" content="CulturePunks">
+<meta property="og:description" content="2,222 rare and original hand drawn punks on Robinhood Chain.">
+<meta property="og:image" content="og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lime:#ccff00; --ink:#000; --red:#a41e2b; --hot:#e0293b; --sky:#2f8bff; --blue:#1d5de0;
+  --yellow:#ffd21f; --pink:#ff5fb0; --purple:#7a3ff2; --orange:#ff7a1a; --paper:#fffdf0;
+  --display:"Press Start 2P","Courier New",monospace;
+  --marker:"Pixelify Sans","Courier New",monospace;
+  --body:"Pixelify Sans","Courier New",monospace;
+  --pad:clamp(1.1rem,4vw,3rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--lime);color:var(--ink);font:400 1.2rem/1.5 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.dark :focus-visible,.red :focus-visible,.blue :focus-visible{outline-color:var(--paper)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad);position:relative}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;letter-spacing:.01em}
+h2{font-size:clamp(1.3rem,4.2vw,2.8rem);line-height:1.3}
+.sec{padding:clamp(3.5rem,9vw,7rem) 0;border-top:4px solid var(--ink)}
+.note{font-family:var(--marker);font-weight:700;font-size:clamp(1.2rem,2.6vw,1.7rem);line-height:1.1;display:inline-block;transform:rotate(-4deg)}
+.t{aspect-ratio:1;background-color:var(--lime);background-repeat:no-repeat;background-size:1000% 1000%}
+
+/* bar */
+.bar{position:sticky;top:0;z-index:20;background:var(--yellow);border-bottom:4px solid var(--ink)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:3.6rem}
+.logo{font-family:var(--display);font-size:.85rem;text-decoration:none}
+.bar nav{display:flex;gap:1.4rem;font-weight:700}
+.bar nav a{text-decoration:none}
+.bar nav a:hover{text-decoration:underline;text-decoration-thickness:3px}
+.chain{border:3px solid var(--ink);background:var(--pink);border-radius:99px;padding:.1rem .8rem;font-weight:700;font-size:.95rem;white-space:nowrap}
+@media(max-width:700px){.bar nav{display:none}}
+
+/* buttons */
+.cta{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.8rem}
+.btn{display:inline-block;font:400 .72rem/1.4 var(--display);text-decoration:none;color:var(--ink);background:var(--paper);border:4px solid var(--ink);padding:.85rem 1.1rem;box-shadow:5px 5px 0 var(--ink);cursor:pointer;transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)}
+.btn:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--ink)}
+.btn.main{background:var(--ink);color:var(--lime);box-shadow:5px 5px 0 var(--hot)}
+.btn.pop{background:var(--yellow)}
+.btn.soon{opacity:.6;cursor:not-allowed}
+
+/* hero */
+.hero{--h:clamp(1.9rem,11.2vw,9.5rem);padding:clamp(2rem,6vw,4.5rem) 0 0;overflow:hidden;position:relative;background:radial-gradient(rgba(0,0,0,.14) 1.6px,transparent 1.8px) 0 0/16px 16px,var(--lime)}
+.sun{position:absolute;border:4px solid var(--ink);border-radius:50%}
+.sun.a{width:clamp(9rem,26vw,22rem);aspect-ratio:1;background:var(--pink);right:-4vw;top:22%}
+.sun.b{width:clamp(5rem,12vw,10rem);aspect-ratio:1;background:var(--sky);left:-3vw;bottom:34%;border-radius:0;transform:rotate(14deg)}
+h1{font-size:var(--h);line-height:1.05;-webkit-text-stroke:.035em #000;paint-order:stroke fill;text-shadow:.06em .06em 0 #000}
+h1 .w{display:block}
+.lede{max-width:34rem;font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:600;margin:1.8rem 0 0;line-height:1.35;background:var(--paper);border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:1rem 1.2rem;position:relative}
+.burst{position:absolute;right:var(--pad);top:calc(var(--h)*1.1);width:clamp(7.5rem,15vw,11rem);aspect-ratio:1;display:grid;place-items:center;text-align:center;transform:rotate(12deg);filter:drop-shadow(5px 5px 0 #000);z-index:2}
+.burst::before,.burst::after{content:"";position:absolute;inset:0;background:var(--yellow)}
+.burst::after{transform:rotate(45deg)}
+.burst b{position:relative;z-index:1;font-family:var(--display);font-weight:400;font-size:clamp(.85rem,1.9vw,1.3rem);line-height:1.2}
+.burst b small{display:block;margin-top:.35rem;font:700 clamp(.85rem,1.4vw,1.05rem)/1.1 var(--body)}
+@media(max-width:760px){.burst{position:static;margin:1.4rem 0 0;transform:rotate(-6deg)}}
+.wall{position:relative;display:flex;justify-content:center;align-items:flex-end;margin:clamp(2.5rem,6vw,4rem) 0 0;padding:0 1rem}
+.wall .t{width:clamp(95px,19vw,250px);border:4px solid var(--ink);border-bottom:0;margin-left:-1.6vw;transform:rotate(var(--r));transform-origin:bottom center;box-shadow:6px 0 0 var(--ink);animation:drop .8s cubic-bezier(.3,1.5,.5,1) both;animation-delay:calc(var(--i)*.09s + .1s)}
+.wall .t:first-child{margin-left:0}
+.wall .note{position:absolute;right:var(--pad);top:-2.6rem;color:var(--red)}
+@keyframes drop{from{transform:translateY(-90vh) rotate(calc(var(--r)*4));opacity:0}to{opacity:1}}
+@media(max-width:560px){.wall .t:nth-child(n+5){display:none}}
+
+/* bands */
+.words{background:var(--yellow);border-top:4px solid var(--ink);border-bottom:4px solid var(--ink);overflow:hidden;white-space:nowrap}
+.words .track{display:flex;width:max-content;animation:run 38s linear infinite;padding:.7rem 0;font-family:var(--display);font-size:clamp(.85rem,2vw,1.35rem)}
+.words span{padding:0 1.1rem}
+.words i{font-style:normal;color:var(--hot)}
+.ticker{background:var(--ink);overflow:hidden}
+.ticker .track{display:flex;gap:1rem;width:max-content;padding:1rem 0;animation:run 60s linear infinite}
+.ticker .t{width:110px;flex:none;border:3px solid var(--lime)}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* meet */
+.meet{background:var(--pink)}
+.pick{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.stage{border:5px solid var(--ink);box-shadow:10px 10px 0 var(--ink);transform:rotate(-2deg)}
+.stage .t{width:100%}
+.pick .id{font-family:var(--display);font-size:clamp(1.3rem,4vw,2.4rem);margin:0 0 .6rem;color:var(--paper);-webkit-text-stroke:.03em #000;paint-order:stroke fill;text-shadow:.05em .05em 0 #000}
+.pick p{max-width:30rem;margin:1rem 0 0}
+.pick .note{margin-top:1.4rem;color:var(--blue)}
+@media(max-width:760px){.pick{grid-template-columns:1fr}}
+
+/* gallery */
+.dark{background:var(--ink);color:var(--lime)}
+.dark .btn{border-color:var(--lime);box-shadow:5px 5px 0 var(--hot)}
+.dark .btn.main{background:var(--lime);color:var(--ink)}
+.gh{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem;margin-bottom:2rem}
+.gh p{margin:.8rem 0 0;max-width:26rem;color:var(--paper)}
+.tools{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.tools input{font:700 1.05rem var(--body);width:11rem;padding:.7rem .9rem;border:4px solid var(--lime);background:var(--ink);color:var(--lime);border-radius:0}
+.tools input::placeholder{color:var(--lime);opacity:.65}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,160px),1fr));gap:1rem}
+.card{all:unset;box-sizing:border-box;cursor:pointer;display:block;border:3px solid var(--lime);background:var(--paper);color:var(--ink);transition:transform .12s}
+.card:hover{transform:translateY(-4px) rotate(-1deg)}
+.card:focus-visible{outline:3px solid var(--paper);outline-offset:3px}
+.card .t{width:100%}
+.card span{display:block;font-weight:700;padding:.3rem .6rem;border-top:3px solid var(--ink)}
+.card:nth-child(5n+1) span{background:var(--yellow)}
+.card:nth-child(5n+2) span{background:var(--pink)}
+.card:nth-child(5n+3) span{background:var(--sky)}
+.card:nth-child(5n+4) span{background:var(--lime)}
+.card:nth-child(5n) span{background:var(--orange)}
+.more{display:flex;flex-direction:column;align-items:center;gap:.8rem;margin-top:2.5rem}
+.count{margin:0;font-weight:600;color:var(--paper)}
+
+/* lightbox */
+dialog{border:5px solid var(--ink);padding:0;background:var(--lime);color:var(--ink);box-shadow:10px 10px 0 var(--hot);width:min(92vw,480px)}
+dialog::backdrop{background:rgba(0,0,0,.82)}
+dialog .t{width:100%}
+.lb-bar{display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.8rem;background:var(--yellow);border-top:5px solid var(--ink)}
+.lb-bar strong{font-family:var(--display);font-weight:400;font-size:1rem}
+.lb-bar .btn{padding:.4rem .9rem;box-shadow:3px 3px 0 var(--ink)}
+
+/* about */
+.blue{background:var(--blue);color:var(--paper)}
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+.about p{max-width:34rem;margin:1.4rem 0 0}
+.about .note{color:var(--yellow);margin-top:1.6rem}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.facts div{border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:1.1rem;color:var(--ink);min-height:9rem;display:flex;flex-direction:column;justify-content:space-between}
+.facts div:nth-child(1){background:var(--yellow);transform:rotate(-2deg)}
+.facts div:nth-child(2){background:var(--pink);transform:rotate(1.5deg)}
+.facts div:nth-child(3){background:var(--lime);transform:rotate(1deg)}
+.facts div:nth-child(4){background:var(--paper);transform:rotate(-1.5deg)}
+.facts b{font-family:var(--display);font-weight:400;font-size:clamp(.8rem,1.5vw,1rem);line-height:1.4;overflow-wrap:anywhere}
+.facts span{font-weight:600;font-size:1rem;line-height:1.25}
+@media(max-width:800px){.about{grid-template-columns:1fr}}
+
+/* statement */
+.say{background:var(--yellow);text-align:left}
+.say h2{font-size:clamp(1.4rem,5.2vw,3.8rem);max-width:18ch;line-height:1.25}
+.say p{max-width:34rem;margin:1.6rem 0 0;font-weight:600;font-size:1.25rem}
+.say .t{position:absolute;right:var(--pad);bottom:-.5rem;width:clamp(100px,18vw,220px);border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);transform:rotate(5deg)}
+@media(max-width:700px){.say .t{display:none}}
+
+/* faq */
+.faq{background:var(--paper)}
+.faq .list{max-width:46rem;margin-top:2.2rem;display:grid;gap:.9rem}
+details{border:4px solid var(--ink);background:var(--lime);box-shadow:5px 5px 0 var(--ink)}
+details:nth-child(2n){background:var(--pink)}
+details:nth-child(3n){background:var(--sky)}
+summary{cursor:pointer;list-style:none;font-weight:700;font-size:1.15rem;padding:.9rem 3.2rem .9rem 1.1rem;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:1.1rem;top:50%;translate:0 -50%;font:400 1.8rem var(--display)}
+details[open] summary::after{content:"–"}
+details p{margin:0;padding:0 1.1rem 1.1rem}
+
+/* join */
+.red{background:var(--red);color:var(--paper)}
+.red h2{max-width:13ch}
+.red p{max-width:32rem;margin:1.2rem 0 0;font-weight:600}
+.red .btn{color:var(--ink)}
+.red .btn.main{background:var(--lime);color:var(--ink);box-shadow:5px 5px 0 var(--ink)}
+footer{background:var(--ink);color:var(--lime);padding:1.6rem 0;font-weight:600;border-top:4px solid var(--ink)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem}
+.copy{background:var(--lime);color:var(--ink);text-align:center;padding:1.1rem var(--pad);font:400 .62rem/1.7 var(--display);border-top:4px solid var(--ink)}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .wall .t{animation:none}
+  .words .track,.ticker .track{animation:none}
+  .ticker,.words{overflow-x:auto}
+  .btn,.card{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#top">CulturePunks</a>
+    <nav aria-label="Main"><a href="#meet">Meet a CulturePunks</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#faq">FAQ</a></nav>
+    <span class="chain">Robinhood Chain</span>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="sun a" aria-hidden="true"></div>
+    <div class="sun b" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="burst" aria-hidden="true"><b>2,222<small>hand drawn punks</small></b></div>
+      <h1 id="mark"><span class="w">Culture</span><span class="w">Punks</span></h1>
+      <p class="lede">Welcome to CulturePunks. 2,222 rare and original hand drawn punks in my culture style with inspirations from NFT and pop culture. Building a brand.</p>
+      <div class="cta">
+        <a class="btn main" href="#gallery">Browse all 2,222</a>
+        <a class="btn pop" data-link="mint">Mint</a>
+        <a class="btn" data-link="market">Marketplace</a>
+      </div>
+    </div>
+    <div class="wrap" style="padding:0"><div class="wall" id="wall" aria-hidden="true"><span class="note">only 7 of 2,222!</span></div></div>
+  </section>
+
+  <div class="words" aria-hidden="true"><div class="track" id="words"></div></div>
+  <div class="ticker" aria-hidden="true"><div class="track" id="track"></div></div>
+
+  <section class="sec meet" id="meet">
+    <div class="wrap pick">
+      <div class="stage"><div class="t" id="pickImg" role="img" aria-label="A random CulturePunks"></div></div>
+      <div>
+        <p class="id" id="pickId">#1</p>
+        <h2>Meet a CulturePunks</h2>
+        <p>All punks have their own hair, face, gear and attitude. Pull one at random and see who shows up today.</p>
+        <div class="cta">
+          <button class="btn main" id="roll" type="button">Show me another</button>
+          <button class="btn" id="pickOpen" type="button">Open large</button>
+        </div>
+        <span class="note">keep rolling, there’s a lot of them</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec dark" id="gallery">
+    <div class="wrap">
+      <div class="gh">
+        <div>
+          <h2>The full<br>collection</h2>
+          <p>All 2,222 punks in one place. Tap the punks to see them big, or jump straight to your favorite number.</p>
+        </div>
+        <div class="tools">
+          <form id="jump" role="search">
+            <input id="num" type="number" min="1" max="2222" inputmode="numeric" placeholder="Find punks #" aria-label="Find punks by number, 1 to 2222">
+          </form>
+          <button class="btn" id="shuffle" type="button">Shuffle order</button>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="more">
+        <p class="count" id="count" aria-live="polite"></p>
+        <button class="btn main" id="more" type="button">Load more punks</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec blue" id="about">
+    <div class="wrap about">
+      <div>
+        <h2>Hand drawn in my own culture style</h2>
+        <p>CulturePunks mixes what I love about NFT history with pop culture, and all punks are drawn by hand. 2,222 rare and original characters, all living on Robinhood Chain.</p>
+        <p>The goal is bigger than a drop. These punks are the first chapter of something I’m building, and the community that picks one up is part of it from day one.</p>
+        <span class="note">welcome to the culture</span>
+      </div>
+      <div class="facts">
+        <div><b>2,222</b><span>punks in the whole collection</span></div>
+        <div><b>Robinhood Chain</b><span>the network they live on</span></div>
+        <div><b>Hand drawn</b><span>rare and original, one by one</span></div>
+        <div><b>NFT × Pop culture</b><span>where the ideas come from</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec say">
+    <div class="wrap">
+      <h2>Punks first. Then the whole brand.</h2>
+      <p>CulturePunks is a collection today and a brand tomorrow. Grab your punks now and be there while it grows.</p>
+      <div class="t" id="sayImg" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="sec faq" id="faq">
+    <div class="wrap">
+      <h2>Quick answers</h2>
+      <div class="list">
+        <details><summary>What is CulturePunks?</summary><p>A collection of 2,222 rare and original hand drawn punks, made in my culture style with inspirations from NFT and pop culture.</p></details>
+        <details><summary>How many punks are there?</summary><p>2,222 in total.</p></details>
+        <details><summary>Which blockchain are they on?</summary><p>Robinhood Chain.</p></details>
+        <details><summary>Is the art original?</summary><p>Yes. All punks are hand drawn and original.</p></details>
+        <details><summary>Where can I get one?</summary><p>The mint and marketplace links go in the buttons on this page as soon as they are live. Follow on X to hear first.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec red" id="join">
+    <div class="wrap">
+      <h2>Join the culture</h2>
+      <p>Follow the brand, pick your punks, and be early.</p>
+      <div class="cta">
+        <a class="btn main" data-link="x">Follow on X</a>
+        <a class="btn" data-link="mint">Mint</a>
+        <a class="btn" data-link="market">Marketplace</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>CulturePunks, 2,222 punks on Robinhood Chain</span><span>Building a brand.</span></div></footer>
+<div class="copy">© 2026 CulturePunks. All rights reserved.</div>
+
+<dialog id="lb" aria-label="Punks viewer">
+  <div class="t" id="lbImg" role="img" aria-label=""></div>
+  <div class="lb-bar">
+    <button class="btn" id="prev" type="button" aria-label="Previous punks">Prev</button>
+    <strong id="lbCap"></strong>
+    <button class="btn" id="next" type="button" aria-label="Next punks">Next</button>
+    <button class="btn main" id="close" type="button">Close</button>
+  </div>
+</dialog>
+
+<script>
+/* ---- EDIT THESE: paste your real links, leave '' until they are ready ---- */
+const LINKS = { x: '', mint: '', market: '' };
+const TOTAL = 2222, STEP = 60;
+
+const $ = id => document.getElementById(id);
+const rnd = (max = TOTAL) => 1 + Math.floor(Math.random() * max);
+
+/* every punk lives on a sprite sheet: 100 punks (10 x 10) per sheet */
+function pos(n) {
+  const i = n - 1, s = Math.floor(i / 100) + 1, k = i % 100;
+  return `background-image:url(s${s}.webp),url(sheets/s${s}.webp);background-position:${(k % 10) / 9 * 100}% ${Math.floor(k / 10) / 9 * 100}%`;
+}
+function paint(el, n) { el.style.cssText = pos(n); el.setAttribute('aria-label', 'CulturePunks #' + n); }
+const tile = (n, extra = '') => `<div class="t" role="img" aria-label="CulturePunks #${n}" style="${pos(n)};${extra}"></div>`;
+
+/* links */
+document.querySelectorAll('[data-link]').forEach(a => {
+  const url = LINKS[a.dataset.link];
+  if (url) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; }
+  else { a.classList.add('soon'); a.setAttribute('aria-disabled', 'true'); a.textContent += ' (soon)'; }
+});
+
+/* rainbow wordmark */
+const cols = ['#e0293b', '#2f8bff', '#ffd21f', '#ff5fb0', '#7a3ff2', '#fffdf0'];
+document.querySelectorAll('#mark .w').forEach((w, wi) => {
+  const t = w.textContent;
+  w.setAttribute('aria-hidden', 'true');
+  w.innerHTML = [...t].map((c, i) => `<span style="color:${cols[(i + wi * 2) % cols.length]}">${c}</span>`).join('');
+});
+$('mark').setAttribute('aria-label', 'CulturePunks');
+
+/* hero wall */
+const featured = [3, 7, 1, 8, 5, 11, 2], rot = [-6, 4, -3, 0, 3, -4, 6];
+$('wall').insertAdjacentHTML('afterbegin', featured.map((n, i) => tile(n, `--r:${rot[i]}deg;--i:${i}`)).join(''));
+
+/* word band + punk ticker */
+const words = ['Hand drawn', 'Original', '2,222 punks', 'Robinhood Chain', 'NFT × Pop culture', 'Building a brand'];
+const wd = words.map(w => `<span>${w}</span><span><i>★</i></span>`).join('');
+$('words').innerHTML = wd + wd + wd + wd;
+const strip = Array.from({ length: 28 }, () => rnd(200));
+$('track').innerHTML = strip.concat(strip).map(n => tile(n)).join('');
+
+/* random punk */
+let picked = 1;
+function roll() { picked = rnd(); paint($('pickImg'), picked); $('pickId').textContent = '#' + picked; }
+$('roll').onclick = roll;
+$('pickOpen').onclick = () => openBox(picked);
+roll();
+paint($('sayImg'), 8);
+
+/* lightbox */
+const lb = $('lb');
+let cur = 1;
+function openBox(n) {
+  cur = n; paint($('lbImg'), n);
+  $('lbCap').textContent = '#' + n;
+  if (!lb.open) lb.showModal();
+}
+const step = d => openBox(((cur - 1 + d + TOTAL) % TOTAL) + 1);
+$('prev').onclick = () => step(-1);
+$('next').onclick = () => step(1);
+$('close').onclick = () => lb.close();
+lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+document.addEventListener('keydown', e => {
+  if (!lb.open) return;
+  if (e.key === 'ArrowLeft') step(-1);
+  if (e.key === 'ArrowRight') step(1);
+});
+
+/* gallery */
+let order = Array.from({ length: TOTAL }, (_, i) => i + 1), shown = 0;
+const grid = $('grid');
+function card(n) {
+  const b = document.createElement('button');
+  b.className = 'card'; b.type = 'button';
+  b.setAttribute('aria-label', 'Open punks #' + n);
+  b.innerHTML = tile(n).replace('role="img" ', 'aria-hidden="true" ') + `<span>#${n}</span>`;
+  b.onclick = () => openBox(n);
+  return b;
+}
+function more() {
+  const f = document.createDocumentFragment();
+  order.slice(shown, shown + STEP).forEach(n => f.append(card(n)));
+  shown = Math.min(shown + STEP, TOTAL);
+  grid.append(f);
+  $('count').textContent = 'Showing ' + shown.toLocaleString('en-US') + ' of ' + TOTAL.toLocaleString('en-US');
+  $('more').hidden = shown >= TOTAL;
+}
+$('more').onclick = more;
+$('shuffle').onclick = () => {
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  grid.innerHTML = ''; shown = 0; more();
+};
+$('jump').addEventListener('submit', e => {
+  e.preventDefault();
+  const n = parseInt($('num').value, 10);
+  if (n >= 1 && n <= TOTAL) openBox(n);
+  else $('num').setCustomValidity('Enter a number from 1 to 2222');
+  $('num').reportValidity();
+});
+$('num').addEventListener('input', () => $('num').setCustomValidity(''));
+more();
+</script>
+</body>
+</html>
