@@ -1,1 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<title>CulturePunks</title>
+<meta name="description" content="2,222 rare and original hand drawn punks in my culture style, with inspirations from NFT and pop culture.">
+<meta property="og:title" content="CulturePunks">
+<meta property="og:description" content="2,222 rare and original hand drawn punks in my culture style, with inspirations from NFT and pop culture.">
+<meta property="og:image" content="images/1099.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="images/1099.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#000;
+  --lime:#ccff00;
+  --white:#fff;
+  --dim:rgba(255,255,255,.72);
+  --line:rgba(255,255,255,.18);
+  --bronze:#624e37;--ruby:#a2262a;--silver:#c0cccc;--gold:#c6c654;
+  --display:"Dela Gothic One","Arial Black",Impact,sans-serif;
+  --body:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --pad:clamp(1.1rem,4vw,3rem);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{background:var(--black);color:var(--white);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--pad)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;letter-spacing:-.01em}
 
+/* header */
+header{position:sticky;top:0;z-index:20;background:var(--black);border-bottom:2px solid var(--lime)}
+.bar{display:flex;align-items:center;gap:1.5rem;height:3.75rem}
+.logo{font-family:var(--display);font-size:1.15rem;color:var(--lime);text-decoration:none;margin-right:auto}
+nav{display:flex;gap:1.6rem}
+nav a{text-decoration:none;font-weight:700;font-size:.95rem}
+nav a:hover{color:var(--lime)}
+.btn{display:inline-block;font:700 1rem/1 var(--body);padding:.95rem 1.5rem;background:var(--lime);color:var(--black);border:2px solid var(--lime);text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--black);color:var(--lime)}
+.btn.ghost{background:transparent;color:var(--lime)}
+.btn.ghost:hover{background:var(--lime);color:var(--black)}
+.btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
+.bar .btn{padding:.7rem 1.1rem;font-size:.9rem}
+
+/* hero */
+.hero{padding:clamp(2.5rem,7vw,5.5rem) 0 clamp(2rem,5vw,3.5rem)}
+.hero h1{font-size:min(15vw,10.5rem);color:var(--lime);letter-spacing:-.02em}
+.hero p{max-width:34rem;font-size:1.25rem;color:var(--dim);margin:1.6rem 0 2rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+
+/* punk strip */
+.strip{background:var(--lime);overflow:hidden;border-block:2px solid var(--lime)}
+.track{display:flex;width:max-content;animation:slide 60s linear infinite}
+.strip:hover .track{animation-play-state:paused}
+.track button{all:unset;cursor:pointer;display:block;position:relative;flex:none}
+.track img{width:clamp(180px,22vw,280px);height:auto}
+.track button:focus-visible{outline:3px solid var(--black);outline-offset:-3px}
+.tag{position:absolute;left:.6rem;top:.6rem;background:var(--black);color:var(--lime);font:700 .8rem/1 var(--body);padding:.35rem .5rem;opacity:0;transition:opacity .15s}
+.track button:hover .tag,.track button:focus-visible .tag{opacity:1}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* about */
+.about{background:var(--lime);color:var(--black);padding:clamp(3rem,8vw,6rem) 0}
+.about .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(1.5rem,5vw,4rem);align-items:end}
+.about h2{font-size:clamp(2rem,5.2vw,4rem)}
+.about p{font-size:1.15rem;font-weight:500;max-width:30rem}
+.about p+p{margin-top:1rem}
+
+/* traits */
+section.pad{padding:clamp(3rem,8vw,6rem) 0}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1rem 3rem;margin-bottom:2.5rem}
+.head h2{font-size:clamp(2rem,5vw,3.6rem)}
+.head p{max-width:27rem;color:var(--dim)}
+.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:2.5rem 3rem}
+.group h3{font-size:1.35rem;color:var(--lime);padding-bottom:.7rem;border-bottom:2px solid var(--lime);margin-bottom:.4rem}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.15rem .8rem;padding:.55rem 0;border-bottom:1px solid var(--line);align-items:center}
+.row .n{display:flex;align-items:center;gap:.6rem;font-weight:700}
+.row .c{font-variant-numeric:tabular-nums;color:var(--dim)}
+.row .b{grid-column:1/-1;height:.4rem;background:var(--line)}
+.row .b i{display:block;height:100%;background:var(--lime)}
+.coin{display:inline-grid;place-items:center;width:1.9rem;height:1.9rem;font:700 .72rem/1 var(--body);clip-path:polygon(30% 0,70% 0,100% 30%,100% 70%,70% 100%,30% 100%,0 70%,0 30%);color:#fff;flex:none}
+.coin.c1{background:var(--bronze)}.coin.c5{background:var(--ruby)}
+.coin.c10{background:var(--silver);color:#000}
+.coin.c25{background:#000;color:#fff;box-shadow:inset 0 0 0 2px var(--silver)}
+.coin.c50{background:var(--gold);color:#000}
+.note{margin-top:2rem;color:var(--dim);font-size:.95rem;max-width:40rem}
+
+/* gallery */
+.gallery{background:#0d0d0d}
+.find{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.find input{font:500 1rem/1 var(--body);width:11rem;padding:.85rem 1rem;background:var(--black);color:var(--white);border:2px solid var(--lime);border-radius:0}
+.find input::placeholder{color:var(--dim)}
+.find .btn{padding:.85rem 1.2rem}
+.msg{flex-basis:100%;min-height:1.4rem;font-size:.95rem;color:var(--lime)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,15rem),1fr));gap:.9rem}
+.grid button{all:unset;cursor:pointer;display:block;position:relative;background:var(--lime);aspect-ratio:1/1}
+.grid img{width:100%;height:auto}
+.grid button:hover,.grid button:focus-visible{outline:3px solid var(--white);outline-offset:-3px}
+.grid .tag{opacity:1}
+.more{display:flex;justify-content:center;margin-top:2.2rem}
+dialog{border:3px solid var(--lime);background:var(--black);color:var(--white);padding:0;width:min(94vw,34rem);max-height:94vh;overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.82)}
+dialog img{width:100%;height:auto;background:var(--lime)}
+dialog .info{padding:1.1rem 1.2rem 1.3rem}
+dialog h3{font-size:1.4rem;color:var(--lime)}
+dialog dl{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1.2rem;margin-top:.7rem}
+dialog dt{color:var(--dim)}dialog dd{font-weight:700}
+dialog form{padding:0 1.2rem 1.2rem}
+dialog .x{font:700 1rem/1 var(--body);padding:.8rem 1.2rem;background:var(--lime);color:#000;border:0;cursor:pointer}
+
+/* faq */
+.faq{max-width:46rem}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:1.15rem 0;font-weight:700;font-size:1.15rem;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--lime);font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{padding:0 0 1.3rem;color:var(--dim);max-width:38rem}
+
+/* footer */
+footer{background:var(--lime);color:#000;padding:2.5rem 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between}
+footer .logo{color:#000;font-size:1.6rem;margin:0}
+footer ul{display:flex;gap:1.4rem;list-style:none;padding:0;flex-wrap:wrap}
+footer a{font-weight:700}
+footer small{font-weight:500}
+
+@media (max-width:760px){
+  nav{display:none}
+  .about .wrap{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .track{animation:none}
+  .strip{overflow-x:auto}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">CulturePunks</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#traits">Traits</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn" data-link="opensea" href="#">OpenSea</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <h1>CulturePunks</h1>
+      <p>2,222 hand drawn punks with thick outlines, loud colors and a coin in every corner.</p>
+      <div class="cta">
+        <a class="btn" data-link="opensea" href="#">View on OpenSea</a>
+        <a class="btn ghost" href="#gallery">Browse the punks</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-label="A selection of CulturePunks">
+    <div class="track" id="track"></div>
+  </div>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <h2>Made in my culture style, built to become a brand.</h2>
+      <div>
+        <p>CulturePunks is a collection of 2,222 rare and original hand drawn punks, inspired by NFT history and pop culture.</p>
+        <p>Every punk stands on a neon lime background and carries its own mix of skin, hair, eyes and accessories, plus a coin that shows how rare it is.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="traits">
+    <div class="wrap">
+      <div class="head">
+        <h2>What makes each punk different</h2>
+        <p>Seven trait groups, all drawn by hand and mixed across the 2,222 supply. Bars show how common each trait is.</p>
+      </div>
+      <div class="groups" id="groups"></div>
+      <p class="note">Coins work like a rarity badge: the higher the number, the fewer punks carry it.</p>
+    </div>
+  </section>
+
+  <section class="pad gallery" id="gallery">
+    <div class="wrap">
+      <div class="head">
+        <h2>All 2,222 punks</h2>
+        <form class="find" id="find" novalidate>
+          <label for="num" class="sr" style="position:absolute;left:-9999px">Punk number</label>
+          <input id="num" type="number" inputmode="numeric" min="1" max="2222" placeholder="Find a punk, 1 to 2222">
+          <button class="btn" type="submit">Open</button>
+          <p class="msg" id="msg" role="status"></p>
+        </form>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="more"><button class="btn ghost" id="more" type="button">Show more</button></div>
+    </div>
+  </section>
+
+  <section class="pad" id="faq">
+    <div class="wrap">
+      <div class="head"><h2>Questions</h2></div>
+      <div class="faq">
+        <details><summary>What is CulturePunks?</summary><p>A collection of 2,222 rare and original hand drawn punks, made in my culture style with inspirations from NFT and pop culture.</p></details>
+        <details><summary>How many punks are there?</summary><p>2,222 in total, numbered 1 to 2,222.</p></details>
+        <details><summary>What do the coins mean?</summary><p>Each punk holds one coin in the top right corner: 1, 5, 10, 25 or 50. The 50 coin is the rarest.</p></details>
+        <details><summary>Where can I get one?</summary><p>Use the OpenSea button at the top of the page. The button turns on as soon as the collection link is added to this site.</p></details>
+        <details><summary>Are all backgrounds the same?</summary><p>Yes. Every punk sits on the same neon lime background, so the traits are what set them apart.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top">CulturePunks</a>
+    <ul>
+      <li><a data-link="opensea" href="#">OpenSea</a></li>
+      <li><a data-link="x" href="#">X</a></li>
+      <li><a data-link="discord" href="#">Discord</a></li>
+    </ul>
+    <small>&copy; 2026 CulturePunks. All rights reserved.</small>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <img id="dlgImg" alt="">
+  <div class="info">
+    <h3 id="dlgTitle"></h3>
+    <dl id="dlgList"></dl>
+  </div>
+  <form method="dialog"><button class="x">Close</button></form>
+</dialog>
+
+<script>
+/* Isi link kamu di sini. Link yang kosong akan tetap nonaktif. */
+const LINKS = { opensea: "", x: "", discord: "" };
+
+const TOTAL = 2222;
+const DATA = {"punks":[{"id":1099,"hair":"Brown Wavy","skin":"Mocha","eyes":"Classic","coin":"1","acc":"Coffee Mug"},{"id":569,"hair":"Cat Ear Hood","skin":"Mocha","eyes":"Classic","coin":"5","acc":"None"},{"id":1098,"hair":"Spiky Hair","skin":"Copper","eyes":"Cyan","coin":"10","acc":"Pen Cup"},{"id":408,"hair":"Long Blonde","skin":"Peach","eyes":"Red","coin":"25","acc":"None"},{"id":13,"hair":"Hoodie","skin":"Copper","eyes":"Cyan","coin":"50","acc":"Coffee Mug"},{"id":1717,"hair":"Mohawk","skin":"Copper","eyes":"Magenta","coin":"1","acc":"None"},{"id":328,"hair":"Short Black","skin":"Crimson","eyes":"Magenta","coin":"5","acc":"None"},{"id":1191,"hair":"Ponytail","skin":"Mocha","eyes":"Magenta","coin":"10","acc":"None"},{"id":1108,"hair":"Beanie","skin":"Mocha","eyes":"Classic","coin":"25","acc":"Pen Cup"},{"id":25,"hair":"Rainbow Afro","skin":"Crimson","eyes":"Cyan","coin":"25","acc":"None"},{"id":1166,"hair":"Pigtails","skin":"Crimson","eyes":"Magenta","coin":"1","acc":"None"},{"id":689,"hair":"Space Helmet","skin":"Astronaut","eyes":"Classic","coin":"5","acc":"None"}],"traits":{"Skin":{"Crimson":495,"Copper":440,"Rainbow":142,"Mocha":476,"Astronaut":64,"Peach":478,"Mint":127},"Hair":{"Mohawk":207,"Beanie":187,"Rainbow Afro":80,"Spiky Hair":270,"Ponytail":190,"Hoodie":220,"Space Helmet":64,"Cat Ear Hood":234,"Long Blonde":220,"Short Black":206,"Brown Wavy":209,"Purple Spike":1,"Pigtails":68,"Silver Long":66},"Eyes":{"Classic":673,"Magenta":590,"Cyan":603,"Green":169,"Red":187},"Coin":{"5":854,"10":263,"25":141,"1":915,"50":49},"Accessory":{"None":1036,"Pen Cup":507,"Coffee Mug":679},"Cigarette":{"Yes":693,"No":1529},"Necklace":{"Gold Chain":543,"None":1679}}};
+
+const KNOWN = Object.fromEntries(DATA.punks.map(p=>[p.id,p]));
+const img = id => `images/${id}.png`;
+const alt = id => { const p = KNOWN[id]; return p ? `CulturePunk #${id}: ${p.skin} skin, ${p.hair}, ${p.eyes} eyes` : `CulturePunk #${id}`; };
+const btn = (id,lazy) => `<button type="button" data-id="${id}" aria-label="Open CulturePunk #${id}"><img src="${img(id)}" alt="${alt(id)}"${lazy?' loading="lazy"':''}><span class="tag">#${id}</span></button>`;
+
+/* links */
+document.querySelectorAll("[data-link]").forEach(a=>{
+  const url = LINKS[a.dataset.link];
+  if(url){ a.href = url; a.target = "_blank"; a.rel = "noopener"; }
+  else { a.removeAttribute("href"); a.setAttribute("aria-disabled","true"); }
+});
+
+/* strip */
+const strip = DATA.punks.map(p=>btn(p.id,true)).join("");
+document.getElementById("track").innerHTML = strip + strip.replace(/ loading="lazy"/g,"").replace(/aria-label="[^"]*"/g,'aria-hidden="true" tabindex="-1"');
+
+/* gallery: all punks, 24 at a time */
+const grid = document.getElementById("grid");
+const moreBtn = document.getElementById("more");
+let shown = 0;
+function showMore(n){
+  const end = Math.min(shown + n, TOTAL);
+  let html = "";
+  for(let i = shown + 1; i <= end; i++) html += btn(i,true);
+  grid.insertAdjacentHTML("beforeend", html);
+  shown = end;
+  if(shown >= TOTAL) moreBtn.hidden = true;
+}
+showMore(24);
+moreBtn.addEventListener("click", ()=>showMore(24));
+
+/* dialog */
+const dlg = document.getElementById("dlg");
+function openPunk(id){
+  const p = KNOWN[id];
+  document.getElementById("dlgImg").src = img(id);
+  document.getElementById("dlgImg").alt = alt(id);
+  document.getElementById("dlgTitle").textContent = `CulturePunks #${id}`;
+  document.getElementById("dlgList").innerHTML = p
+    ? [["Skin",p.skin],["Hair",p.hair],["Eyes",p.eyes],["Coin",p.coin],["Accessory",p.acc]].map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join("")
+    : "";
+  dlg.showModal();
+}
+document.addEventListener("click", e=>{
+  const b = e.target.closest("button[data-id]");
+  if(b) openPunk(+b.dataset.id);
+});
+dlg.addEventListener("click", e=>{ if(e.target===dlg) dlg.close(); });
+
+/* find by number */
+document.getElementById("find").addEventListener("submit", e=>{
+  e.preventDefault();
+  const v = parseInt(document.getElementById("num").value, 10);
+  const msg = document.getElementById("msg");
+  if(Number.isInteger(v) && v >= 1 && v <= TOTAL){ msg.textContent = ""; openPunk(v); }
+  else msg.textContent = "Enter a number from 1 to 2,222.";
+});
+
+/* traits */
+const groups = document.getElementById("groups");
+["Skin","Hair","Eyes","Coin","Accessory","Cigarette","Necklace"].forEach(name=>{
+  let entries = Object.entries(DATA.traits[name]);
+  entries = name==="Coin" ? entries.sort((a,b)=>a[0]-b[0]) : entries.sort((a,b)=>b[1]-a[1]);
+  const rows = entries.map(([k,v])=>{
+    const pct = v/TOTAL*100;
+    const label = name==="Coin" ? `<span class="coin c${k}" aria-hidden="true">${k}</span>Coin ${k}` : k;
+    return `<div class="row"><span class="n">${label}</span><span class="c">${v.toLocaleString("en-US")}</span><span class="b" aria-hidden="true"><i style="width:${Math.max(pct,0.6).toFixed(1)}%"></i></span></div>`;
+  }).join("");
+  groups.insertAdjacentHTML("beforeend", `<div class="group"><h3>${name}</h3>${rows}</div>`);
+});
+</script>
+</body>
+</html>
